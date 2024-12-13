@@ -19,7 +19,7 @@ export default function ChatInterface() {
     
     setLoading(true);
     try {
-      const model = genAI.getGenerativeModel({ model: 'gemini-2.0-flash-exp' });
+      const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
       const result = await model.generateContent(generateCareerPrompt(prompt));
       const response = await result.response;
       setResponse(response.text());
